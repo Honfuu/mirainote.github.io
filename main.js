@@ -1,4 +1,4 @@
-// ハンバーガーメニューの制御
+// ハンバーガーメニュー制御
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const nav = document.getElementById('nav');
