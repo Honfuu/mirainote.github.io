@@ -1,3 +1,4 @@
+console.log("main.js loaded");
 // ハンバーガーメニューの制御
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerBtn = document.getElementById('hamburger-btn');
