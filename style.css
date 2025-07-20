@@ -91,7 +91,7 @@ body {
 
 /* ハンバーガーメニュー */
 .hamburger-menu {
-    /* 必要に応じて、paddingやmargin、flexboxなどのレイアウト用のスタイルのみを記述 */
+    display: none;
 }
 
 .hamburger-btn {
