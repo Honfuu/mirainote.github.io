@@ -90,10 +90,6 @@ body {
 }
 
 /* ハンバーガーメニュー */
-.hamburger-menu {
-    display: none;
-}
-
 .hamburger-btn {
     background: none;
     border: none;
