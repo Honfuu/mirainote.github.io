@@ -614,6 +614,8 @@ body {
     /* ハンバーガーメニュー */
     .hamburger-menu {
         display: block;
+        margin-left: auto;
+        z-index: 1100;
     }
     
     .nav {
@@ -728,6 +730,106 @@ body {
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: var(--font-size-sm);
     }
+}
+
+/* ===================================
+   FAQページ
+=================================== */
+.page-header {
+    background-color: var(--bg-light);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+}
+
+.faq-section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-white);
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--bg-light);
+}
+
+.faq-question h3 {
+    font-size: var(--font-size-md);
+    color: var(--text-dark);
+    margin: 0;
+    flex: 1;
+}
+
+.faq-toggle {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-left: var(--spacing-sm);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-cta {
+    text-align: center;
+    background-color: var(--bg-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+}
+
+.faq-cta p {
+    font-size: var(--font-size-md);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.faq-cta .btn {
+    margin: 0 var(--spacing-xs);
 }
 
 /* ===================================
