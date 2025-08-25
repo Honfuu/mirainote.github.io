@@ -510,8 +510,8 @@ body {
 }
 
 .phone-contact {
-    background-color: var(--primary-color);
-    color: var(--bg-white);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
 }
 
 .phone-content {
