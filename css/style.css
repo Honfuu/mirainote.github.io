@@ -784,6 +784,11 @@ body {
     width: 100%;
     text-align: left;
     outline: none;
+    position: relative;
+}
+
+.faq-item summary * {
+    pointer-events: none;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -811,6 +816,8 @@ body {
     color: var(--primary-color);
     margin-left: var(--spacing-sm);
     transition: transform 0.3s ease;
+    pointer-events: none;
+    user-select: none;
 }
 
 .faq-item[open] .faq-question {
