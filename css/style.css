@@ -771,14 +771,28 @@ body {
     overflow: hidden;
 }
 
-.faq-question {
-    padding: var(--spacing-lg);
+/* details要素のデフォルトスタイルをリセット */
+.faq-item summary {
+    list-style: none !important;
     cursor: pointer;
+    padding: var(--spacing-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-white);
     transition: background-color 0.3s ease;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+/* デフォルトの矢印マーカーを非表示 */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::marker {
+    display: none;
 }
 
 .faq-question:hover {
@@ -800,8 +814,13 @@ body {
     transition: transform 0.3s ease;
 }
 
-.faq-item.active .faq-toggle {
-    transform: rotate(180deg);
+/* detailsが開いている時のスタイル */
+.faq-item[open] .faq-question {
+    background-color: var(--bg-light);
+}
+
+.faq-item[open] .faq-toggle {
+    transform: rotate(45deg);
 }
 
 .faq-answer {
