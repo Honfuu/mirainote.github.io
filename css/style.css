@@ -771,9 +771,13 @@ body {
     overflow: hidden;
 }
 
-/* ラジオボタンを非表示にする */
+/* ラジオボタンを完全に非表示にする */
 .faq-input {
-    display: none;
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
 }
 
 .faq-question {
