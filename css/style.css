@@ -771,9 +771,8 @@ body {
     overflow: hidden;
 }
 
-/* details要素のデフォルトスタイルをリセット */
 .faq-item summary {
-    list-style: none !important;
+    list-style: none;
     cursor: pointer;
     padding: var(--spacing-lg);
     display: flex;
@@ -784,9 +783,9 @@ body {
     border: none;
     width: 100%;
     text-align: left;
+    outline: none;
 }
 
-/* デフォルトの矢印マーカーを非表示 */
 .faq-item summary::-webkit-details-marker {
     display: none;
 }
@@ -814,7 +813,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* detailsが開いている時のスタイル */
 .faq-item[open] .faq-question {
     background-color: var(--bg-light);
 }
