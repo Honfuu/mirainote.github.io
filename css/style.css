@@ -791,6 +791,10 @@ body {
     pointer-events: none;
 }
 
+.faq-item summary {
+    pointer-events: auto;
+}
+
 .faq-item summary::-webkit-details-marker {
     display: none;
 }
@@ -814,10 +818,11 @@ body {
     font-size: var(--font-size-xl);
     font-weight: 700;
     color: var(--primary-color);
-    margin-left: var(--spacing-sm);
+    margin-left: auto;
     transition: transform 0.3s ease;
     pointer-events: none;
     user-select: none;
+    flex-shrink: 0;
 }
 
 .faq-item[open] .faq-question {
