@@ -771,18 +771,11 @@ body {
     overflow: hidden;
 }
 
-/* ラジオボタンを完全に非表示にする */
-.faq-input {
-    display: none !important;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    left: -9999px;
-}
-
-.faq-question {
-    padding: var(--spacing-lg);
+/* details要素のデフォルトスタイルをリセット */
+.faq-item summary {
+    list-style: none;
     cursor: pointer;
+    padding: var(--spacing-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -791,6 +784,15 @@ body {
     border: none;
     width: 100%;
     text-align: left;
+}
+
+/* デフォルトの矢印マーカーを非表示 */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::marker {
+    display: none;
 }
 
 .faq-question:hover {
@@ -810,30 +812,33 @@ body {
     color: var(--primary-color);
     margin-left: var(--spacing-sm);
     transition: transform 0.3s ease;
+    pointer-events: none; /* +ボタン自体はクリックできないようにする */
 }
 
-/* ラジオボタンがチェックされた時のスタイル */
-.faq-input:checked + .faq-question .faq-toggle {
-    transform: rotate(45deg);
-}
-
-.faq-input:checked + .faq-question {
+/* detailsが開いている時のスタイル */
+.faq-item[open] .faq-question {
     background-color: var(--bg-light);
 }
 
-/* アンサーセクションの表示/非表示 */
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 var(--spacing-lg);
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    border-top: 1px solid transparent;
+.faq-item[open] .faq-toggle {
+    transform: rotate(45deg);
 }
 
-.faq-input:checked ~ .faq-answer {
-    max-height: 200px; /* 十分な高さを設定 */
-    padding: var(--spacing-lg);
+.faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
     border-top: 1px solid var(--border-color);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .faq-answer p {
