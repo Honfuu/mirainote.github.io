@@ -771,6 +771,11 @@ body {
     overflow: hidden;
 }
 
+/* ラジオボタンを非表示にする */
+.faq-input {
+    display: none;
+}
+
 .faq-question {
     padding: var(--spacing-lg);
     cursor: pointer;
@@ -779,6 +784,9 @@ body {
     align-items: center;
     background-color: var(--bg-white);
     transition: background-color 0.3s ease;
+    border: none;
+    width: 100%;
+    text-align: left;
 }
 
 .faq-question:hover {
@@ -800,12 +808,27 @@ body {
     transition: transform 0.3s ease;
 }
 
-.faq-item.active .faq-toggle {
-    transform: rotate(180deg);
+/* ラジオボタンがチェックされた時のスタイル */
+.faq-input:checked + .faq-question .faq-toggle {
+    transform: rotate(45deg);
 }
 
+.faq-input:checked + .faq-question {
+    background-color: var(--bg-light);
+}
+
+/* アンサーセクションの表示/非表示 */
 .faq-answer {
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 var(--spacing-lg);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    border-top: 1px solid transparent;
+}
+
+.faq-input:checked ~ .faq-answer {
+    max-height: 200px; /* 十分な高さを設定 */
+    padding: var(--spacing-lg);
     border-top: 1px solid var(--border-color);
 }
 
