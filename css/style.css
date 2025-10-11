@@ -772,8 +772,12 @@ body {
 }
 
 /* details要素のデフォルトスタイルをリセット */
+.faq-item {
+    position: relative;
+}
+
 .faq-item summary {
-    list-style: none;
+    list-style: none !important;
     cursor: pointer;
     padding: var(--spacing-lg);
     display: flex;
@@ -784,6 +788,7 @@ body {
     border: none;
     width: 100%;
     text-align: left;
+    position: relative;
 }
 
 /* デフォルトの矢印マーカーを非表示 */
