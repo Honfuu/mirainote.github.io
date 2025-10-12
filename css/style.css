@@ -887,4 +887,330 @@ body {
         --text-dark: #000000;
         --text-light: #333333;
     }
+}
+
+/* ===================================
+   サービス一覧ページ
+=================================== */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.page-subtitle {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    margin: 0;
+}
+
+.services-list {
+    padding: var(--spacing-xxl) 0;
+}
+
+.service-item {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-xl);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xs) var(--spacing-xl);
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.service-info h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.service-description {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.feature-tag {
+    background: var(--bg-light);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+
+.service-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-image {
+    width: 200px;
+    height: 150px;
+    background: var(--bg-light);
+    border: 2px dashed #ddd;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.placeholder-image i {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.service-actions {
+    background: var(--bg-light);
+    padding: var(--spacing-xs) var(--spacing-xl) var(--spacing-xs) var(--spacing-xl);
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.services-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===================================
+   料金表ページ
+=================================== */
+.pricing-table {
+    padding: var(--spacing-xxl) 0;
+}
+
+.pricing-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.service-pricing {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-pricing:hover {
+    transform: translateY(-5px);
+}
+
+.service-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: var(--spacing-lg);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.service-header .service-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.service-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.pricing-details {
+    padding: var(--spacing-lg);
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.pricing-row:last-child {
+    border-bottom: none;
+}
+
+.pricing-label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.pricing-value {
+    font-weight: 700;
+    color: white;
+    text-align: right;
+}
+
+.pricing-notes {
+    background: var(--bg-light);
+    padding: var(--spacing-xxl) 0;
+}
+
+.pricing-notes h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-dark);
+}
+
+.notes-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.note-item {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.note-item h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.note-item i {
+    color: var(--secondary-color);
+}
+
+.pricing-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+}
+
+.pricing-cta h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ===================================
+   レスポンシブ対応
+=================================== */
+@media (max-width: 768px) {
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .service-image {
+        order: -1;
+    }
+    
+    .placeholder-image {
+        width: 100%;
+        height: 120px;
+    }
+    
+    .service-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pricing-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .notes-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    .pricing-value {
+        text-align: left;
+    }
 } 
