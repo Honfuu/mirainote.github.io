@@ -501,6 +501,16 @@ body {
     color: var(--text-light);
 }
 
+.news-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.news-content a:hover {
+    color: var(--secondary-color);
+}
+
 /* ===================================
    お問い合わせセクション
 =================================== */
