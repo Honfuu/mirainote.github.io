@@ -1291,4 +1291,125 @@ body {
     .fare-table td {
         padding: var(--spacing-xs) var(--spacing-sm);
     }
+}
+
+/* ===================================
+   会社概要ページ
+=================================== */
+.company-overview {
+    padding: var(--spacing-2xl) 0;
+}
+
+.overview-table-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+
+.overview-table th {
+    width: 200px;
+    padding: var(--spacing-md);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-weight: 700;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.overview-table td {
+    padding: var(--spacing-md);
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+    line-height: 1.8;
+}
+
+.overview-table tr:last-child th,
+.overview-table tr:last-child td {
+    border-bottom: none;
+}
+
+.business-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.business-list li {
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.business-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.company-message {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--bg-light);
+}
+
+.message-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.message-content h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.message-content p {
+    font-size: var(--font-size-md);
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .overview-table {
+        font-size: var(--font-size-sm);
+    }
+    
+    .overview-table th {
+        width: 120px;
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-xs);
+    }
+    
+    .overview-table td {
+        padding: var(--spacing-sm);
+    }
+    
+    .overview-table th,
+    .overview-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .overview-table th {
+        border-bottom: none;
+        padding-bottom: var(--spacing-xs);
+    }
+    
+    .overview-table td {
+        border-top: none;
+        padding-top: 0;
+        padding-bottom: var(--spacing-md);
+    }
 } 
