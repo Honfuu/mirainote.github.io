@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="みらいのてへのお問い合わせフォーム。サービスに関するご質問やご相談を承っております。">
-    <meta name="keywords" content="お問い合わせ,問い合わせ,みらいのて,つくばみらい市,福祉タクシー">
-    <title>お問い合わせ - みらいのて</title>
+    <meta name="description" content="みらいのての会社概要。事業所情報、代表者、営業時間、事業内容などをご紹介いたします。">
+    <meta name="keywords" content="会社概要,事業所,みらいのて,つくばみらい市,福祉タクシー">
+    <title>会社概要 - みらいのて</title>
     <link rel="stylesheet" href="../css/style.css?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -34,10 +34,10 @@
                     <ul class="nav-list">
                         <li><a href="../index.html">ホーム</a></li>
                         <li><a href="../services/">サービス</a></li>
-                        <li><a href="../about/">会社概要</a></li>
+                        <li><a href="index.html">会社概要</a></li>
                         <li><a href="../pricing/">料金案内</a></li>
                         <li><a href="../faq/">よくある質問</a></li>
-                        <li><a href="index.html">お問い合わせ</a></li>
+                        <li><a href="../contact/">お問い合わせ</a></li>
                     </ul>
                 </nav>
 
@@ -54,86 +54,81 @@
         <!-- ページタイトル -->
         <section class="page-header">
             <div class="container">
-                <h1 class="page-title">お問い合わせ</h1>
-                <p class="page-subtitle">サービスに関するご質問やご相談を承っております</p>
+                <h1 class="page-title">会社概要</h1>
+                <p class="page-subtitle">事業所情報をご紹介いたします</p>
             </div>
         </section>
 
-        <!-- お問い合わせフォーム -->
-        <section class="contact-form-section">
+        <!-- 事業所概要 -->
+        <section class="company-overview">
             <div class="container">
-                <div class="form-wrapper">
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name">お名前 <span class="required">必須</span></label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">電話番号 <span class="required">必須</span></label>
-                            <input type="tel" id="phone" name="phone" placeholder="090-1234-5678" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">メールアドレス</label>
-                            <input type="email" id="email" name="email" placeholder="example@email.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">お問い合わせサービス</label>
-                            <select id="service" name="service">
-                                <option value="">選択してください</option>
-                                <option value="外出支援サービス">外出支援サービス</option>
-                                <option value="福祉タクシー">福祉タクシー</option>
-                                <option value="便利屋事業">便利屋事業</option>
-                                <option value="ボランティア事業">ボランティア事業</option>
-                                <option value="その他">その他</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="preferred-date">希望日時（任意）</label>
-                            <input type="text" id="preferred-date" name="preferred-date" placeholder="例：2025年1月15日 10:00">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-                            <textarea id="message" name="message" rows="6" required placeholder="ご質問やご相談内容をご記入ください"></textarea>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="privacy" required>
-                                <span><a href="#" target="_blank">プライバシーポリシー</a>に同意します</span>
-                            </label>
-                        </div>
-
-                        <div class="form-submit">
-                            <button type="submit" class="btn btn-primary btn-large">
-                                <i class="fas fa-paper-plane"></i> 送信する
-                            </button>
-                        </div>
-                    </form>
-                    <p class="form-note">※送信ボタンをクリックすると、お使いのメールアプリが開きます。</p>
+                <div class="overview-table-wrapper">
+                    <table class="overview-table">
+                        <tbody>
+                            <tr>
+                                <th>屋号</th>
+                                <td>みらいのて</td>
+                            </tr>
+                            <tr>
+                                <th>福祉タクシー事業名</th>
+                                <td>福祉タクシーみらい</td>
+                            </tr>
+                            <tr>
+                                <th>代表</th>
+                                <td>木村 高弥</td>
+                            </tr>
+                            <tr>
+                                <th>住所</th>
+                                <td>〒茨城県つくばみらい市 山王新田<br>（自宅兼事務所のため、詳細は掲載しておりません）</td>
+                            </tr>
+                            <tr>
+                                <th>電話番号</th>
+                                <td>090-5188-4807</td>
+                            </tr>
+                            <tr>
+                                <th>FAX</th>
+                                <td>なし</td>
+                            </tr>
+                            <tr>
+                                <th>営業日</th>
+                                <td>月曜日〜土曜日（祝祭日も営業）</td>
+                            </tr>
+                            <tr>
+                                <th>営業時間</th>
+                                <td>8:00〜18:00（時間外も対応可能）</td>
+                            </tr>
+                            <tr>
+                                <th>事業開始日</th>
+                                <td>2025年4月16日</td>
+                            </tr>
+                            <tr>
+                                <th>事業情報</th>
+                                <td>
+                                    一般乗用旅客自動車運送事業（福祉事業限定）<br>
+                                    有償運送許可: 関自旅二第1062号
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>事業内容</th>
+                                <td>
+                                    <ul class="business-list">
+                                        <li>福祉タクシーみらい</li>
+                                        <li>生活支援サービス</li>
+                                        <li>ふれあいサロンみらいライフ</li>
+                                        <li>便利事業</li>
+                                        <li>農業（ボランティア）</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>タクシー許認可日</th>
+                                <td>2025年7月31日</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
-
-        <!-- 電話でのお問い合わせ -->
-        <section class="phone-contact">
-            <div class="container">
-                <div class="phone-content">
-                    <h2>お電話でのお問い合わせ</h2>
-                    <p>お急ぎの場合は、お電話でもお問い合わせいただけます。</p>
-                    <a href="tel:090-5188-4807" class="btn btn-primary btn-large">
-                        <i class="fas fa-phone"></i> 090-5188-4807
-                    </a>
-                    <p class="phone-hours">営業時間：8:00〜18:00（定休日：日曜）</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
@@ -179,3 +174,4 @@
     <script src="../js/main.js" defer></script>
 </body>
 </html>
+
