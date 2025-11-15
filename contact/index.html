@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="みらいのてへのお問い合わせフォーム。サービスに関するご質問やご相談を承っております。">
+    <meta name="keywords" content="お問い合わせ,問い合わせ,みらいのて,つくばみらい市,介護タクシー">
+    <title>お問い合わせ - みらいのて</title>
+    <link rel="stylesheet" href="../css/style.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>みらいのて</h1>
+                    <p>介護タクシー・生活支援サービス</p>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <div class="hamburger-menu">
+                    <button class="hamburger-btn" id="hamburger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- ナビゲーション -->
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html">ホーム</a></li>
+                        <li><a href="../services/">サービス</a></li>
+                        <li><a href="../about/">会社概要</a></li>
+                        <li><a href="../pricing/">料金案内</a></li>
+                        <li><a href="../faq/">よくある質問</a></li>
+                        <li><a href="index.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 090-5188-4807</p>
+                    <p><i class="fas fa-clock"></i> 8:00〜18:00（定休日：日曜）</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ページタイトル -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">お問い合わせ</h1>
+                <p class="page-subtitle">サービスに関するご質問やご相談を承っております</p>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">必須</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">電話番号 <span class="required">必須</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="090-1234-5678" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">お問い合わせサービス</label>
+                            <select id="service" name="service">
+                                <option value="">選択してください</option>
+                                <option value="外出支援サービス">外出支援サービス</option>
+                                <option value="介護タクシー">介護タクシー</option>
+                                <option value="便利屋事業">便利屋事業</option>
+                                <option value="ボランティア事業">ボランティア事業</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferred-date">希望日時（任意）</label>
+                            <input type="text" id="preferred-date" name="preferred-date" placeholder="例：2025年1月15日 10:00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+                            <textarea id="message" name="message" rows="6" required placeholder="ご質問やご相談内容をご記入ください"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span><a href="#" target="_blank">プライバシーポリシー</a>に同意します</span>
+                            </label>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-paper-plane"></i> 送信する
+                            </button>
+                        </div>
+                    </form>
+                    <p class="form-note">※送信ボタンをクリックすると、お使いのメールアプリが開きます。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 電話でのお問い合わせ -->
+        <section class="phone-contact">
+            <div class="container">
+                <div class="phone-content">
+                    <h2>お電話でのお問い合わせ</h2>
+                    <p>お急ぎの場合は、お電話でもお問い合わせいただけます。</p>
+                    <a href="tel:090-5188-4807" class="btn btn-primary btn-large">
+                        <i class="fas fa-phone"></i> 090-5188-4807
+                    </a>
+                    <p class="phone-hours">営業時間：8:00〜18:00（定休日：日曜）</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>みらいのて</h3>
+                    <p>介護タクシー・生活支援サービス</p>
+                    <p>代表：木村 高弥</p>
+                    <p>茨城県つくばみらい市山王新田</p>
+                </div>
+                <div class="footer-section">
+                    <h3>サービス</h3>
+                    <ul>
+                        <li><a href="../services/gaishutsu.html">外出支援サービス</a></li>
+                        <li><a href="../services/kaigo-taxi.html">介護タクシー</a></li>
+                        <li><a href="../services/benriya.html">便利屋事業</a></li>
+                        <li><a href="../services/volunteer.html">ボランティア事業</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>営業情報</h3>
+                    <p>営業時間：8:00〜18:00</p>
+                    <p>定休日：日曜</p>
+                    <p>電話：090-5188-4807</p>
+                    <p>メール：mirainote.0416@icloud.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>SNS</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/mirai.life2024" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 みらいのて. All rights reserved.</p>
+                <p>サービス利用で得た個人情報は、事業以外では使用致しません。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
+
