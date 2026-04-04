@@ -1224,9 +1224,10 @@ body {
 }
 
 .pricing-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(10.5rem, 32%) 1fr;
+    gap: var(--spacing-md);
+    align-items: start;
     padding: var(--spacing-sm) 0;
     border-bottom: 1px solid var(--bg-light);
 }
@@ -1238,12 +1239,16 @@ body {
 .pricing-label {
     font-weight: 500;
     color: var(--text-dark);
+    line-height: 1.5;
+    word-break: keep-all;
 }
 
 .pricing-value {
     font-weight: 700;
     color: var(--primary-color);
-    text-align: right;
+    text-align: left;
+    line-height: 1.6;
+    min-width: 0;
 }
 
 .pricing-notes {
@@ -1330,8 +1335,7 @@ body {
     }
     
     .pricing-row {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: 1fr;
         gap: var(--spacing-xs);
     }
     
@@ -1341,7 +1345,7 @@ body {
 }
 
 /* ===================================
-   介護タクシー詳細料金表
+   福祉タクシー詳細料金表
 =================================== */
 .pricing-table-detail {
     padding: var(--spacing-2xl) 0;
