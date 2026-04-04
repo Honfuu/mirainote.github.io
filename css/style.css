@@ -1251,6 +1251,60 @@ body {
     min-width: 0;
 }
 
+/* まごのてサービス：プラン見出しと配下の内訳 */
+.pricing-details--magonote .pricing-plan-group {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.pricing-details--magonote .pricing-plan-group:last-of-type {
+    margin-bottom: var(--spacing-md);
+}
+
+.pricing-plan-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.pricing-plan-content {
+    padding-top: var(--spacing-xs);
+}
+
+.pricing-subrow {
+    display: grid;
+    grid-template-columns: minmax(5.5rem, 24%) 1fr;
+    gap: var(--spacing-sm);
+    align-items: start;
+    padding: var(--spacing-xs) 0;
+}
+
+.pricing-sublabel {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.pricing-subvalue {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    line-height: 1.65;
+    min-width: 0;
+}
+
+.pricing-row--section-start {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--bg-light);
+}
+
 .pricing-notes {
     background: var(--bg-light);
     padding: var(--spacing-xxl) 0;
@@ -1341,6 +1395,11 @@ body {
     
     .pricing-value {
         text-align: left;
+    }
+
+    .pricing-subrow {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
     }
 }
 
