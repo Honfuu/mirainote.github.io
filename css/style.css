@@ -1035,7 +1035,8 @@ body {
 
 .page-subtitle {
     font-size: var(--font-size-lg);
-    opacity: 0.9;
+    color: #fff;
+    opacity: 0.95;
     margin: 0;
 }
 
