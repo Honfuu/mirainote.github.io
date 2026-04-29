@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const bodyEncoded = encodeURIComponent(body);
             
             // mailtoリンクを作成
-            const mailtoLink = `mailto:mirainote.0416@icloud.com?subject=${subject}&body=${bodyEncoded}`;
+            const mailtoLink = `mailto:mirainote.0416@gmail.com?subject=${subject}&body=${bodyEncoded}`;
             
             // メールクライアントを開く
             window.location.href = mailtoLink;
