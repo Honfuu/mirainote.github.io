@@ -1225,10 +1225,9 @@ body {
 }
 
 .pricing-row {
-    display: grid;
-    grid-template-columns: minmax(10.5rem, 32%) 1fr;
-    gap: var(--spacing-md);
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
     padding: var(--spacing-sm) 0;
     border-bottom: 1px solid var(--bg-light);
 }
@@ -1238,8 +1237,9 @@ body {
 }
 
 .pricing-label {
+    font-size: var(--font-size-xs);
     font-weight: 500;
-    color: var(--text-dark);
+    color: var(--text-light);
     line-height: 1.5;
     word-break: keep-all;
 }
@@ -1249,7 +1249,6 @@ body {
     color: var(--primary-color);
     text-align: left;
     line-height: 1.6;
-    min-width: 0;
 }
 
 /* まごのてサービス：複数プランの階層＋他カードと同じ行レイアウト */
@@ -1292,7 +1291,6 @@ body {
 }
 
 .pricing-plan-content .pricing-row {
-    grid-template-columns: minmax(11rem, 38%) 1fr;
     padding: var(--spacing-sm) 0;
 }
 
@@ -1402,19 +1400,6 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .pricing-row {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xs);
-    }
-    
-    .pricing-value {
-        text-align: left;
-    }
-
-    .pricing-plan-content .pricing-row {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xs);
-    }
 }
 
 /* ===================================
@@ -1550,6 +1535,51 @@ body {
     left: 0;
     color: var(--primary-color);
     font-weight: 700;
+}
+
+.policy-section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-intro {
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xl);
+}
+
+.policy-item {
+    margin-bottom: var(--spacing-xl);
+}
+
+.policy-item h2 {
+    font-size: var(--font-size-lg);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.policy-item p {
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.policy-list {
+    margin-top: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.policy-date {
+    color: var(--text-light);
+    font-size: var(--font-size-xs);
+    text-align: right;
 }
 
 .company-message {
