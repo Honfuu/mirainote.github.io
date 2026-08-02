@@ -212,6 +212,17 @@ body {
     color: var(--bg-white);
 }
 
+.btn-line {
+    background-color: #06C755;
+    color: var(--bg-white);
+}
+
+.btn-line:hover {
+    background-color: #05a648;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 .btn-large {
     padding: var(--spacing-md) var(--spacing-lg);
     font-size: var(--font-size-md);
@@ -515,13 +526,28 @@ body {
    お問い合わせセクション
 =================================== */
 .phone-contact,
-.contact-form-section {
+.contact-form-section,
+.line-contact {
     padding: var(--spacing-xl) 0;
 }
 
 .phone-contact {
     background-color: var(--bg-light);
     color: var(--text-dark);
+}
+
+.line-content {
+    text-align: center;
+}
+
+.line-content h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.line-content p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-light);
 }
 
 .phone-content {
@@ -718,6 +744,12 @@ body {
 
 .footer-section ul li a:hover {
     color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
 }
 
 .social-links a {
