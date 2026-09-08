@@ -522,6 +522,37 @@ body {
     color: var(--secondary-color);
 }
 
+.news-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+}
+
+.news-stat {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: center;
+    min-width: 140px;
+}
+
+.news-stat-value {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.news-stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.news-stats-breakdown {
+    font-size: var(--font-size-xs);
+}
+
 /* ===================================
    お問い合わせセクション
 =================================== */
