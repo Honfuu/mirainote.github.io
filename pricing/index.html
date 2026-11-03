@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=1">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=1">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
-    <link rel="stylesheet" href="../css/style.css?v=9">
+    <link rel="stylesheet" href="../css/style.css?v=10">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -97,6 +97,67 @@
             </div>
         </section>
 
+        <!-- 料金シミュレーター -->
+        <section class="pricing-simulator" id="pricing-simulator">
+            <div class="container">
+                <h2 class="section-title">料金シミュレーター</h2>
+                <p class="simulator-lead">サービスを選んで、概算料金を計算できます。</p>
+
+                <div class="simulator-tabs" role="tablist">
+                    <button type="button" class="simulator-tab active" data-target="sim-magonote" role="tab" aria-selected="true">まごのてサービス</button>
+                    <button type="button" class="simulator-tab" data-target="sim-taxi" role="tab" aria-selected="false">福祉タクシー</button>
+                    <button type="button" class="simulator-tab" data-target="sim-benriya" role="tab" aria-selected="false">便利屋事業</button>
+                </div>
+
+                <div class="simulator-panels">
+                    <!-- まごのてサービス -->
+                    <div class="simulator-panel active" id="sim-magonote">
+                        <div class="form-group">
+                            <label for="mn-plan">プランを選択</label>
+                            <select id="mn-plan">
+                                <option value="2000">通常プラン（2,000円/30分〜）</option>
+                                <option value="3000">専門プラン（3,000円/30分〜）</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mn-minutes">ご利用時間（分）</label>
+                            <input type="number" id="mn-minutes" min="1" step="10" value="30">
+                            <div class="simulator-presets">
+                                <button type="button" class="simulator-preset-btn" data-target="mn-minutes" data-value="30">30分</button>
+                                <button type="button" class="simulator-preset-btn" data-target="mn-minutes" data-value="60">60分</button>
+                                <button type="button" class="simulator-preset-btn" data-target="mn-minutes" data-value="90">90分</button>
+                                <button type="button" class="simulator-preset-btn" data-target="mn-minutes" data-value="120">120分</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary simulator-calc-btn" data-calc="magonote">概算料金を計算する</button>
+                        <div class="simulator-result" id="mn-result" hidden></div>
+                    </div>
+
+                    <!-- 福祉タクシー -->
+                    <div class="simulator-panel" id="sim-taxi" hidden>
+                        <div class="form-group">
+                            <label for="tx-distance">ご利用距離（km）</label>
+                            <input type="number" id="tx-distance" min="0.1" step="0.1" value="1.0">
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label"><input type="checkbox" id="tx-discount"> 障がい者手帳をお持ちの方（1割引）</label>
+                        </div>
+                        <button type="button" class="btn btn-primary simulator-calc-btn" data-calc="taxi">概算料金を計算する</button>
+                        <div class="simulator-result" id="tx-result" hidden></div>
+                        <p class="simulator-note">※料金は税込です。29.5kmを超えるご利用は、お問い合わせください。迎車料金は無料です。</p>
+                    </div>
+
+                    <!-- 便利屋事業 -->
+                    <div class="simulator-panel" id="sim-benriya" hidden>
+                        <p class="simulator-text">便利屋事業は作業内容により料金が異なるため、シミュレーターでの算出は行っておりません。お気軽に無料お見積もりをご依頼ください。</p>
+                        <a href="../contact/" class="btn btn-outline">お問い合わせはこちら</a>
+                    </div>
+                </div>
+
+                <p class="simulator-disclaimer">※表示される金額はあくまで目安です。買い物代金などの実費、有料道路代、駐車場代など、目安に含まれない料金が別途発生する場合があります。正式な料金はお問い合わせ時にご確認ください。</p>
+            </div>
+        </section>
+
         <!-- 料金一覧表 -->
         <section class="pricing-table">
             <div class="container">
@@ -136,7 +197,7 @@
                                 <td data-label="主な対応内容">車椅子対応の送迎・付き添い</td>
                                 <td data-label="対象エリア／対象者">茨城県全域</td>
                                 <td data-label="予約">事前予約制</td>
-                                <td data-label="備考">迎車無料、加算100円/256m、時間制30分3,480円</td>
+                                <td data-label="備考">迎車無料、加算100円/256m（税込）</td>
                             </tr>
                             <tr>
                                 <td data-label="サービス／プラン">便利屋事業</td>
@@ -174,19 +235,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>1.0（初乗り）</td><td>500円</td><td>450円</td></tr>
+                            <tr><td>1.1まで（初乗り）</td><td>500円</td><td>450円</td></tr>
                             <tr><td>3.0</td><td>1,300円</td><td>1,170円</td></tr>
                             <tr><td>5.0</td><td>2,100円</td><td>1,890円</td></tr>
-                            <tr><td>10.0</td><td>4,000円</td><td>3,690円</td></tr>
-                            <tr><td>15.0</td><td>6,000円</td><td>5,490円</td></tr>
-                            <tr><td>20.0</td><td>7,900円</td><td>7,290円</td></tr>
+                            <tr><td>10.0</td><td>4,000円</td><td>3,600円</td></tr>
+                            <tr><td>15.0</td><td>6,000円</td><td>5,400円</td></tr>
+                            <tr><td>20.0</td><td>7,900円</td><td>7,110円</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <details class="fare-table-details">
                     <summary class="fare-table-summary-toggle">
-                        <span>0.5km刻みの全区間料金表を見る（1.0km〜29.5km）</span>
+                        <span>0.5km刻みの全区間料金表を見る（初乗り1.1km〜29.5km）</span>
                         <span class="fare-table-toggle-icon">+</span>
                     </summary>
                     <div class="fare-table-wrapper">
@@ -199,7 +260,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>1.0</td><td>500円</td><td>450円</td></tr>
+                            <tr><td>1.1まで（初乗り）</td><td>500円</td><td>450円</td></tr>
                             <tr><td>1.5</td><td>700円</td><td>630円</td></tr>
                             <tr><td>2.0</td><td>900円</td><td>810円</td></tr>
                             <tr><td>2.5</td><td>1,100円</td><td>990円</td></tr>
@@ -212,51 +273,51 @@
                             <tr><td>6.0</td><td>2,500円</td><td>2,250円</td></tr>
                             <tr><td>6.5</td><td>2,700円</td><td>2,430円</td></tr>
                             <tr><td>7.0</td><td>2,900円</td><td>2,610円</td></tr>
-                            <tr><td>7.5</td><td>3,000円</td><td>2,790円</td></tr>
-                            <tr><td>8.0</td><td>3,200円</td><td>2,970円</td></tr>
-                            <tr><td>8.5</td><td>3,400円</td><td>3,150円</td></tr>
-                            <tr><td>9.0</td><td>3,600円</td><td>3,330円</td></tr>
-                            <tr><td>9.5</td><td>3,800円</td><td>3,510円</td></tr>
-                            <tr><td>10.0</td><td>4,000円</td><td>3,690円</td></tr>
-                            <tr><td>10.5</td><td>4,200円</td><td>3,870円</td></tr>
-                            <tr><td>11.0</td><td>4,400円</td><td>4,050円</td></tr>
-                            <tr><td>11.5</td><td>4,600円</td><td>4,230円</td></tr>
-                            <tr><td>12.0</td><td>4,800円</td><td>4,410円</td></tr>
-                            <tr><td>12.5</td><td>5,000円</td><td>4,590円</td></tr>
-                            <tr><td>13.0</td><td>5,200円</td><td>4,770円</td></tr>
-                            <tr><td>13.5</td><td>5,400円</td><td>4,950円</td></tr>
-                            <tr><td>14.0</td><td>5,600円</td><td>5,130円</td></tr>
-                            <tr><td>14.5</td><td>5,800円</td><td>5,310円</td></tr>
-                            <tr><td>15.0</td><td>6,000円</td><td>5,490円</td></tr>
-                            <tr><td>15.5</td><td>6,200円</td><td>5,670円</td></tr>
-                            <tr><td>16.0</td><td>6,400円</td><td>5,850円</td></tr>
-                            <tr><td>16.5</td><td>6,600円</td><td>6,030円</td></tr>
-                            <tr><td>17.0</td><td>6,800円</td><td>6,210円</td></tr>
-                            <tr><td>17.5</td><td>7,000円</td><td>6,390円</td></tr>
-                            <tr><td>18.0</td><td>7,200円</td><td>6,570円</td></tr>
-                            <tr><td>18.5</td><td>7,400円</td><td>6,750円</td></tr>
-                            <tr><td>19.0</td><td>7,600円</td><td>6,930円</td></tr>
-                            <tr><td>19.5</td><td>7,800円</td><td>7,110円</td></tr>
-                            <tr><td>20.0</td><td>7,900円</td><td>7,290円</td></tr>
-                            <tr><td>20.5</td><td>8,100円</td><td>7,470円</td></tr>
-                            <tr><td>21.0</td><td>8,300円</td><td>7,650円</td></tr>
-                            <tr><td>21.5</td><td>8,500円</td><td>7,830円</td></tr>
-                            <tr><td>22.0</td><td>8,700円</td><td>8,010円</td></tr>
-                            <tr><td>22.5</td><td>8,900円</td><td>8,190円</td></tr>
-                            <tr><td>23.0</td><td>9,100円</td><td>8,370円</td></tr>
-                            <tr><td>23.5</td><td>9,300円</td><td>8,550円</td></tr>
-                            <tr><td>24.0</td><td>9,500円</td><td>8,730円</td></tr>
-                            <tr><td>24.5</td><td>9,700円</td><td>8,910円</td></tr>
-                            <tr><td>25.0</td><td>9,900円</td><td>9,090円</td></tr>
-                            <tr><td>25.5</td><td>10,100円</td><td>9,270円</td></tr>
-                            <tr><td>26.0</td><td>10,300円</td><td>9,450円</td></tr>
-                            <tr><td>26.5</td><td>10,500円</td><td>9,630円</td></tr>
-                            <tr><td>27.0</td><td>10,700円</td><td>9,810円</td></tr>
-                            <tr><td>27.5</td><td>10,900円</td><td>9,990円</td></tr>
-                            <tr><td>28.0</td><td>11,100円</td><td>10,170円</td></tr>
-                            <tr><td>28.5</td><td>11,300円</td><td>10,350円</td></tr>
-                            <tr><td>29.0</td><td>11,400円</td><td>10,530円</td></tr>
-                            <tr><td>29.5</td><td>11,600円</td><td>10,710円</td></tr>
+                            <tr><td>7.5</td><td>3,000円</td><td>2,700円</td></tr>
+                            <tr><td>8.0</td><td>3,200円</td><td>2,880円</td></tr>
+                            <tr><td>8.5</td><td>3,400円</td><td>3,060円</td></tr>
+                            <tr><td>9.0</td><td>3,600円</td><td>3,240円</td></tr>
+                            <tr><td>9.5</td><td>3,800円</td><td>3,420円</td></tr>
+                            <tr><td>10.0</td><td>4,000円</td><td>3,600円</td></tr>
+                            <tr><td>10.5</td><td>4,200円</td><td>3,780円</td></tr>
+                            <tr><td>11.0</td><td>4,400円</td><td>3,960円</td></tr>
+                            <tr><td>11.5</td><td>4,600円</td><td>4,140円</td></tr>
+                            <tr><td>12.0</td><td>4,800円</td><td>4,320円</td></tr>
+                            <tr><td>12.5</td><td>5,000円</td><td>4,500円</td></tr>
+                            <tr><td>13.0</td><td>5,200円</td><td>4,680円</td></tr>
+                            <tr><td>13.5</td><td>5,400円</td><td>4,860円</td></tr>
+                            <tr><td>14.0</td><td>5,600円</td><td>5,040円</td></tr>
+                            <tr><td>14.5</td><td>5,800円</td><td>5,220円</td></tr>
+                            <tr><td>15.0</td><td>6,000円</td><td>5,400円</td></tr>
+                            <tr><td>15.5</td><td>6,200円</td><td>5,580円</td></tr>
+                            <tr><td>16.0</td><td>6,400円</td><td>5,760円</td></tr>
+                            <tr><td>16.5</td><td>6,600円</td><td>5,940円</td></tr>
+                            <tr><td>17.0</td><td>6,800円</td><td>6,120円</td></tr>
+                            <tr><td>17.5</td><td>7,000円</td><td>6,300円</td></tr>
+                            <tr><td>18.0</td><td>7,200円</td><td>6,480円</td></tr>
+                            <tr><td>18.5</td><td>7,300円</td><td>6,570円</td></tr>
+                            <tr><td>19.0</td><td>7,500円</td><td>6,750円</td></tr>
+                            <tr><td>19.5</td><td>7,700円</td><td>6,930円</td></tr>
+                            <tr><td>20.0</td><td>7,900円</td><td>7,110円</td></tr>
+                            <tr><td>20.5</td><td>8,100円</td><td>7,290円</td></tr>
+                            <tr><td>21.0</td><td>8,300円</td><td>7,470円</td></tr>
+                            <tr><td>21.5</td><td>8,500円</td><td>7,650円</td></tr>
+                            <tr><td>22.0</td><td>8,700円</td><td>7,830円</td></tr>
+                            <tr><td>22.5</td><td>8,900円</td><td>8,010円</td></tr>
+                            <tr><td>23.0</td><td>9,100円</td><td>8,190円</td></tr>
+                            <tr><td>23.5</td><td>9,300円</td><td>8,370円</td></tr>
+                            <tr><td>24.0</td><td>9,500円</td><td>8,550円</td></tr>
+                            <tr><td>24.5</td><td>9,700円</td><td>8,730円</td></tr>
+                            <tr><td>25.0</td><td>9,900円</td><td>8,910円</td></tr>
+                            <tr><td>25.5</td><td>10,100円</td><td>9,090円</td></tr>
+                            <tr><td>26.0</td><td>10,300円</td><td>9,270円</td></tr>
+                            <tr><td>26.5</td><td>10,500円</td><td>9,450円</td></tr>
+                            <tr><td>27.0</td><td>10,700円</td><td>9,630円</td></tr>
+                            <tr><td>27.5</td><td>10,900円</td><td>9,810円</td></tr>
+                            <tr><td>28.0</td><td>11,100円</td><td>9,990円</td></tr>
+                            <tr><td>28.5</td><td>11,300円</td><td>10,170円</td></tr>
+                            <tr><td>29.0</td><td>11,400円</td><td>10,260円</td></tr>
+                            <tr><td>29.5</td><td>11,600円</td><td>10,440円</td></tr>
                         </tbody>
                     </table>
                     </div>
@@ -325,5 +386,6 @@
     </footer>
 
     <script src="../js/main.js" defer></script>
+    <script src="../js/pricing-simulator.js" defer></script>
 </body>
 </html>

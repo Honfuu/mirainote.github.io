@@ -1316,6 +1316,147 @@ body {
     padding: var(--spacing-xxl) 0;
 }
 
+/* ===================================
+   料金シミュレーター
+=================================== */
+.pricing-simulator {
+    padding: var(--spacing-xl) 0;
+}
+
+.simulator-lead {
+    color: var(--text-light);
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+}
+
+.simulator-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.simulator-tab {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: -2px;
+}
+
+.simulator-tab:hover {
+    color: var(--primary-color);
+}
+
+.simulator-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.simulator-panels {
+    background: var(--bg-light);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    max-width: 560px;
+}
+
+.simulator-panel select,
+.simulator-panel input[type="number"] {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--bg-white);
+    box-sizing: border-box;
+}
+
+.simulator-panel select:focus,
+.simulator-panel input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.simulator-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.simulator-preset-btn {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.4rem var(--spacing-sm);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: var(--font-size-xs);
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.simulator-preset-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.simulator-calc-btn {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+}
+
+.simulator-text {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.simulator-result {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--bg-white);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
+}
+
+.simulator-price {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 0 var(--spacing-xs);
+}
+
+.simulator-price strong {
+    font-size: var(--font-size-2xl);
+}
+
+.simulator-detail {
+    font-size: var(--font-size-xs);
+    color: var(--text-light);
+    margin: 0;
+}
+
+.simulator-error {
+    color: var(--success-color);
+    font-weight: 500;
+    margin: 0;
+}
+
+.simulator-note,
+.simulator-disclaimer {
+    font-size: var(--font-size-xs);
+    color: var(--text-light);
+    margin-top: var(--spacing-md);
+}
+
 .pricing-summary-wrapper {
     overflow-x: auto;
     margin-top: var(--spacing-lg);
